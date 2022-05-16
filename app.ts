@@ -562,3 +562,52 @@ greet("John");
 // let sun: fnType = function (a: number, b: number): number {
 //   return a + b;
 // };
+
+// Variable in TypeScript
+
+let name02: string = "John";
+let age02: number = 30;
+console.log(`${name02} is ${age02} years old`);
+
+let year: number = 2021;
+console.log("This year " + year);
+number = 2022;
+console.log("Next year " + year);
+
+let favoriteFood: string = "Pad Thai";
+let commentCount: number = 10;
+let dateOfBirth = new Date("2021-07-03");
+
+let favorite_food: string = "Pad Thai";
+let comment_count: number = 10;
+let date_of_birth = new Date("2021-07-03");
+
+// let 2you: string; // Error
+// let my.name: string; // Error
+
+function greet02(name: string) {
+  //no need 'let' ^
+  console.log(`Hi ${name}`);
+}
+
+type User03 = {
+  id: number;
+  name: string;
+};
+
+let user06: User03 = {
+  id: 1,
+  name: "Metin",
+};
+
+class Dog {
+  name: string;
+  color: string;
+}
+
+let myDog = new Dog();
+myDog.name = "Bruce";
+myDog.color = "Brown";
+
+console.log(user);
+console.log(myDog);

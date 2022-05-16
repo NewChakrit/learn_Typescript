@@ -359,3 +359,69 @@ console.log("Length of array: ".concat(numbers.length));
 numbers.forEach(function (value, index) {
     console.log("numbers[".concat(index, "] = ").concat(value));
 });
+// ในการประกาศอาเรย์ เราระบุเครื่องหมาย [] หลังประเภทข้อมูลพื้นฐาน ในตัวอย่างนี้เราประกาศตัวแปร numbers
+// สำหรับเก็บข้อมูลของตัวเลขในรูปแบบของอาเรย์ โดยระบุประเภทข้อมูลให้กับตัวแปรเป็น number[]
+// Object
+var user04 = {
+    id: 1,
+    name: "metin",
+    isAdmin: true
+};
+console.log(user.id);
+var user05 = {
+    id: 1,
+    name: "Metin",
+    isAdmin: true
+};
+// และจากนั้นเราสามารถนำประเภทข้อมูลที่สร้างขึ้น User ไปใช้ในตัวประกาศตัวแปรแทน
+// ดังนั้นค่าที่กำหนดให้กับตัวแปรนี้จะต้องปฏิบัติตามโครงสร้างที่ระบุโดย type User ที่เราได้ประกาศขึ้นมา
+// Function
+// ฟังก์ชัน (Function) เป๋็นอีกประเภทข้อมูลที่เก็บโค้ดที่เขียนขึ้นเพื่อเรียกใช้งานในภายหลัง เนื่องจากฟังก์ชันสามารถเก็บไว้ในตัวแปร
+//  ส่งผ่านพารามิเตอร์ หรือฟิลด์ของออบเจ็คได้ ดังนั้นจึงมีประเภทข้อมูลสำหรับฟังก์ชันในภาษา TypeScript คือ Function
+//  (ที่เริ่มต้นด้วยตัวพิมพ์ใหญ่) นี่เป็นตัวอย่างการประกาศฟังก์ชัน
+var greet01 = function (name) {
+    console.log("Hello ".concat(name));
+};
+greet("John");
+// ในตัวอย่างนี้่ เราได้ประกาศตัวแปร greet สำหรับเก็บค่าที่เป็นฟังก์ชันเพื่อแสดงคำกล่าวทักทายชื่อที่ส่งเข้ามาออกทางหน้าจอ
+// ในกรณีนี้ เมื่อตัวแปรมีค่าเป็นฟังก์ชันนั่นทำให้เราสามารถใช้มันเพื่อเรียกใช้เหมือนกับฟังก์ชันได้
+// ตัวแปรที่กำหนดประเภทข้อมูลเป็น Function สามารถเก็บฟังก์ชันที่มีรูปแบบพารามิเตอร์และการส่งกลับเป็นแบบไหนก็ได้ ในภาษา TypeScript
+// เราสามารถสร้างประเภทข้อมูลของฟังก์ชันเพื่อกำหนดรูปแบบให้กับพารามิเตอร์และค่าที่ส่งกลับของฟังก์ชันได้ ยกตัวอย่างเช่น
+// type fnType = (a: number, b: number) => string;
+// let sun: fnType = function (a: number, b: number): number {
+//   return a + b;
+// };
+// Variable in TypeScript
+var name02 = "John";
+var age02 = 30;
+console.log("".concat(name02, " is ").concat(age02, " years old"));
+var year = 2021;
+console.log("This year " + year);
+number = 2022;
+console.log("Next year " + year);
+var favoriteFood = "Pad Thai";
+var commentCount = 10;
+var dateOfBirth = new Date("2021-07-03");
+var favorite_food = "Pad Thai";
+var comment_count = 10;
+var date_of_birth = new Date("2021-07-03");
+// let 2you: string; // Error
+// let my.name: string; // Error
+function greet02(name) {
+    //no need 'let' ^
+    console.log("Hi ".concat(name));
+}
+var user06 = {
+    id: 1,
+    name: "Metin"
+};
+var Dog = /** @class */ (function () {
+    function Dog() {
+    }
+    return Dog;
+}());
+var myDog = new Dog();
+myDog.name = "Bruce";
+myDog.color = "Brown";
+console.log(user);
+console.log(myDog);
