@@ -99,3 +99,121 @@ greet("Chris");
 greet(15);
 
 // -----  Compile-time type checking  -------
+
+let a: number = 10;
+let b: number = 20;
+let summary: number = a + b;
+console.log(`sum of a and b = ${summary}`);
+
+let c: number = 30;
+let d: number = 40;
+let summary2: number = c + d;
+console.log(`sum of c and d = ${summary2}`);
+// โปรแกรมประกอบไปด้วย 4 คำสั่ง โดยแต่ละคำสั่งจะจบด้วยเครื่องหมายเซมิโคลอน (;)
+
+let user: User = {
+  id: 1,
+  name: "Metin",
+};
+
+let colors = ["Red", "Green", "Blie"];
+
+// นอกจากนี้ ในหนึ่งคำสั่งนั้นยังสามารถมีการทำงานได้มากกว่าหนึ่งอย่าง โดยเราสามารถแยกการทำงานภายในคำสั่งได้ด้วยเครื่องหมายคอมมา (,) เช่น
+let id: number = 1,
+  name2: string = "Matin";
+
+// ------- Block --------
+
+// บล็อค (Block) เป็นการกำหนดขอบเขตการทำงานของโปรแกรมโดยการรวมหลายคำสั่งเข้าด้วยกันให้อยู่ในระหว่างวงเล็บปีกกา {} ที่เรียกว่าขอบเขตของบล็อค
+// ในภาษา TypeScript นั้นบล็อคสามารถสร้างได้จากหลายวิธี รูปแบบของบล็อคที่ง่ายที่สุดคือการสร้างบล็อคแบบไม่ระบุชื่อ
+
+console.log("Top level");
+
+{
+  let name: string = "Martin";
+  console.log(`Hello ${name}`);
+}
+
+{
+  let name = "Block2";
+  console.log(`Hello from ${name}`);
+}
+
+// สำหรับการสร้างบล็อคที่พบได้ในการเขียนโปรแกรมทั่วไปคือการสร้างบล็อคจากคำสั่งควบคุมประเภทต่างๆ
+// ในภาษา TypeScript เช่น คำสั่ง if for while หรือ do while
+// นี่เป็นตัวอย่างการสร้างบล็อคด้วยคำสั่ง if else สำหรับตรวจสอบคะแนนในตัวแปร
+
+let score = 70;
+if (score > 50) {
+  console.log(`Your score is ${score}`);
+  console.log("It's greater than 50");
+} else {
+  console.log("Your score is unacceptable");
+}
+
+function fn1() {
+  console.log("fn1 working...");
+}
+
+function fn2() {
+  console.log("fn2 working...");
+}
+
+fn2();
+
+// นอกจากนี้ บล็อคสามารถที่จะซ้อนกันได้ มันเป็นเรื่องปกติที่ในการเขียนโปรแกรมคุณจะพบว่าบล็อคอาจจะซ้อนกันเป็นจำนวนมาก
+
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+  if (i % 2 == 0) {
+    console.log("Even");
+  } else {
+    console.log("Odd");
+  }
+}
+
+// ตัวแปรที่ประกาศในบล็อคจะสามารถใช้งานได้เพียงแค่ในบล็อคดังกล่าวเท่านั้น เราจะไม่สามารถใช้งานที่ภายนอกของบล็อคได้ ยกตัวอย่างเช่น
+
+let n: number = 10;
+if (n == 10) {
+  let message: string = "n is ten";
+  console.log(message);
+}
+
+// Cannot use message here
+
+// --------- Expressions -----------
+// นิพจน์ (Expression) คือการทำงานร่วมกันของตัวดำเนินการและตัวถูกดำเนินการเพื่อทำให้เกิดผลลัพธ์ใหม่ขึ้น
+// โดยที่ตัวถูกดำเนินการสามารถเป็นได้ทั้ง Literal ตัวแปร หรือออบเจ็คทุกประเภทในภาษา TypeScript
+//  นี่เป็นตัวอย่างของ Expression อย่างง่ายในภาษา TypeScript
+
+3 + 5;
+1 < 10;
+true && false;
+4 >> 2;
+"marcus" + "code";
+!5;
+
+// Expression เหล่านี้เกิดจากการทำงานร่วมกันของตัวดำเนินการและตัวถูกดำเนินการ
+// และส่งผลให้เกิดค่าใหม่ขึ้น โดยปกติแล้วแค่ Expression เพียงอย่างเดียวยังไม่สมบูรณ์ที่จะกำหนดการทำงานของโปรแกรมได้
+//  ดังนั้นเราสามารถเก็บ Expression ไว้ในตัวแปร หรือใช้มันร่วมกับคำสั่งอื่นในโปรแกรมได้ ยกตัวอย่างเช่น
+
+// Assign to a variable
+let i: number = 3 + 5;
+
+// Use as condition
+if (1 < 10) {
+  console.log("Of course! one is less than ten");
+}
+
+// Use in function calls
+console.log(4 >> 2);
+
+// แบบที่ซับซ้อนก็สามารถสร้างได้เช่นเดียวกัน ในตัวอย่างนี้ เป็นโปรแกรมคำนวณหาด้านที่ยาวที่สุดของสามเหลี่ยมมุมฉาก
+// โดยใช้ทฤษฎีบทของปีทากรอรัสที่คุณน่าจะคุ้นเคยในวิชาคณิตศาสตร์
+
+let f: number = 3;
+let g: number = 4;
+
+let h = Math.sqrt(a * a + b * b);
+console.log(`h = ${h}`);
