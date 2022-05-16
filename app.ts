@@ -217,3 +217,88 @@ let g: number = 4;
 
 let h = Math.sqrt(a * a + b * b);
 console.log(`h = ${h}`);
+
+//  --------- Literals ---------
+
+// Literal คือค่าคงที่ที่แสดงถึงค่าของประเภทข้อมูลพื้นฐานในภาษา TypeScript ซึ่งประกอบไปด้วย ตัวเลข
+// ข้อความ Boolean null และ undefined นี่ถือว่าเป็นส่วนที่เล็กที่สุดของข้อมูลที่จะทำให้เกิดข้อมูลประเภทอื่นๆ
+// ตามมา เช่น ออบเจ็ค หรืออาเรย์ เป็นต้น
+
+// Numbers
+12 - 3;
+4.15;
+34;
+0b100010;
+0o42;
+0x22;
+
+// String
+("A");
+("Blue");
+("TypeScript");
+
+// Boolean
+true;
+false;
+
+// Others
+null;
+undefined;
+
+let age: number = 31;
+let sumAge = -2 + 4;
+console.log("I love TypeScript");
+
+let username: string = "admin";
+let password: string = "secret";
+
+if (username == "admin" && password == "secret") {
+  console.log("Login successfully");
+  console.log(`You're logged in as ${username}`);
+} else {
+  console.log("Invalid username or password");
+}
+
+console.log("Top Level 2");
+
+function login(username01: string, password01: string) {
+  console.log("Logging you in ...");
+
+  if (username01 == "admin" && password01 == "secret") {
+    console.log("Loggin successfully");
+    console.log(`You're logged in as ${username}`);
+  } else {
+    console.log("Invalid username or password");
+  }
+}
+
+let username01: string = "admin";
+let password01: string = "secret";
+
+login(username01, password01);
+
+// --------- Delimiters ---------
+// ตัวแบ่ง (,) , (:)
+
+let aa: number = 1,
+  bb: number = 2;
+let languages: string[] = ["Typescript", "Python", "Ruby", "Go"];
+let user01 = { id: 1, name: "Matin" };
+console.log(a, b, languages, user);
+
+function Add(a: number, b: number) {
+  return a + b;
+}
+
+let sum01: number = Add(10, 20);
+console.log(sum01);
+
+for (let i: number = 0; i < 10; i++) {
+  console.log(i);
+}
+
+let items: string[] = ["Computers", "Pancake", "Mountain"];
+console.log(`I like ${items[0]}`);
+
+// สุดท้ายวงเล็บ () ถูกใช้ในสองวัตุประสงค์คือเพื่อควบคุมลำดับความสำคัญการทำงานของนิพจน์
+//  และเพื่อกำหนดส่วนของพารามิเตอร์ของฟังก์ชัน คำสั่งควบคุม หรือคอนสตรัคเตอร์ของคลาส ยกตัวอย่างเช่น

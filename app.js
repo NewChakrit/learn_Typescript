@@ -155,3 +155,66 @@ var f = 3;
 var g = 4;
 var h = Math.sqrt(a * a + b * b);
 console.log("h = ".concat(h));
+//  --------- Literals ---------
+// Literal คือค่าคงที่ที่แสดงถึงค่าของประเภทข้อมูลพื้นฐานในภาษา TypeScript ซึ่งประกอบไปด้วย ตัวเลข
+// ข้อความ Boolean null และ undefined นี่ถือว่าเป็นส่วนที่เล็กที่สุดของข้อมูลที่จะทำให้เกิดข้อมูลประเภทอื่นๆ
+// ตามมา เช่น ออบเจ็ค หรืออาเรย์ เป็นต้น
+// Numbers
+12 - 3;
+4.15;
+34;
+34;
+34;
+0x22;
+// String
+("A");
+("Blue");
+("TypeScript");
+// Boolean
+true;
+false;
+// Others
+null;
+undefined;
+var age = 31;
+var sumAge = -2 + 4;
+console.log("I love TypeScript");
+var username = "admin";
+var password = "secret";
+if (username == "admin" && password == "secret") {
+    console.log("Login successfully");
+    console.log("You're logged in as ".concat(username));
+}
+else {
+    console.log("Invalid username or password");
+}
+console.log("Top Level 2");
+function login(username01, password01) {
+    console.log("Logging you in ...");
+    if (username01 == "admin" && password01 == "secret") {
+        console.log("Loggin successfully");
+        console.log("You're logged in as ".concat(username));
+    }
+    else {
+        console.log("Invalid username or password");
+    }
+}
+var username01 = "admin";
+var password01 = "secret";
+login(username01, password01);
+// --------- Delimiters ---------
+// ตัวแบ่ง (,) , (:)
+var aa = 1, bb = 2;
+var languages = ["Typescript", "Python", "Ruby", "Go"];
+var user01 = { id: 1, name: "Matin" };
+console.log(a, b, languages, user);
+function Add(a, b) {
+    return a + b;
+}
+var sum01 = Add(10, 20);
+console.log(sum01);
+for (var i_2 = 0; i_2 < 10; i_2++) {
+    console.log(i_2);
+}
+var items = ["Computers", "Pancake", "Mountain"];
+console.log("I like ".concat(items[0]));
